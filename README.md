@@ -2,6 +2,13 @@
 
 《不會寫程式，照樣做出一款真的遊戲》線上課程資源。
 
+## v0.6 重點
+
+- `slides/output/`：100 頁正式課程簡報。
+- `instructor/`：100 頁完整授課稿。
+- `examples/checkpoints/CP01～CP06/`：六個可玩階段版本。
+- `docs/prompts/`：可直接複製的 Prompt 卡。
+
 ## 本地預覽
 
 ```cmd
