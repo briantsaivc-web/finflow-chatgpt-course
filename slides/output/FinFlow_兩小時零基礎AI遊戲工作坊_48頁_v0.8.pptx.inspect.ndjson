@@ -1,0 +1,472 @@
+{"kind":"deck","id":"pr/twh70n","name":"Deck"}
+{"kind":"layout","layoutId":"d3f5ac7a-4ebf-4c78-93b2-3382b91ee6a3","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"01d36ffe-5070-4f4b-b26a-29e14b7ac3b7","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/6hbsqr","slide":1,"title":"開場","textShapes":6}
+{"kind":"shape","id":"sh/0nypwja1","slide":1,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/zm583etg","slide":1,"text":"開場","textPreview":"開場","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/elw7u9sv","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/dknq14bq","slide":1,"text":"不會寫程式，照樣做出一款真的遊戲","textPreview":"不會寫程式，照樣做出一款真的遊戲","textChars":16,"textLines":1,"bbox":[76,150,760,190]}
+{"kind":"textbox","id":"sh/cjepsza5","slide":1,"text":"兩小時零基礎實作工作坊","textPreview":"兩小時零基礎實作工作坊","textChars":11,"textLines":1,"bbox":[80,390,680,60]}
+{"kind":"shape","id":"sh/ri58zutk","slide":1,"bbox":[910,170,220,220]}
+{"kind":"textbox","id":"sh/qhw7qpsz","slide":1,"text":"想法\n＋ AI\n＝ 作品","textPreview":"想法 | ＋ AI | ＝ 作品","textChars":12,"textLines":3,"bbox":[930,195,180,170]}
+{"kind":"textbox","id":"sh/pwnqx4be","slide":1,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/6hbsqr","slide":1,"text":""}
+{"kind":"slide","id":"sl/f2cvh3","slide":2,"title":"開場","textShapes":6}
+{"kind":"shape","id":"sh/adc7e50z","slide":2,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/xg36p0jq","slide":2,"text":"開場","textPreview":"開場","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/cfupgvi5","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/nalojq1o","slide":2,"text":"先玩終點，再開始學","textPreview":"先玩終點，再開始學","textChars":9,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/2pc7al03","slide":2,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/pc36l0je","slide":2,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/obupcvit","slide":2,"text":"打開 CP06：15 回合、NPC、結算與重玩","textPreview":"打開 CP06：15 回合、NPC、結算與重玩","textChars":23,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/765ovu1s","slide":2,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/f2cvh3","slide":2,"text":""}
+{"kind":"slide","id":"sl/tae4gb","slide":3,"title":"開場","textShapes":6}
+{"kind":"shape","id":"sh/bipsbe5c","slide":3,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/cjy9kj6x","slide":3,"text":"開場","textPreview":"開場","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/dk7ad4ni","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/2twrepov","slide":3,"text":"我有財商教育構想，但不會寫程式","textPreview":"我有財商教育構想，但不會寫程式","textChars":15,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/3u5s7u5g","slide":3,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/4ve9gz61","slide":3,"text":"這正是 FinFlow 的真實起點","textPreview":"這正是 FinFlow 的真實起點","textChars":17,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/pw7a94n6","slide":3,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/upwrapoj","slide":3,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/tae4gb","slide":3,"text":""}
+{"kind":"slide","id":"sl/z2gaki","slide":4,"title":"開場","textShapes":6}
+{"kind":"shape","id":"sh/ipsvqp4b","slide":4,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/psjulk32","slide":4,"text":"開場","textPreview":"開場","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/4radsfmh","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/relcnuls","slide":4,"text":"AI 不是魔法按鈕","textPreview":"AI 不是魔法按鈕","textChars":9,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/qtsvup47","slide":4,"text":"你決策、AI 動手；你仍負責驗收","textPreview":"你決策、AI 動手；你仍負責驗收","textChars":16,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/dg3up43y","slide":4,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/cfudwzmd","slide":4,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/zilcrul4","slide":4,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/z2gaki","slide":4,"text":""}
+{"kind":"slide","id":"sl/iw6nfz","slide":5,"title":"開場","textShapes":5}
+{"kind":"shape","id":"sh/ytwny18z","slide":5,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/lw7m9g7a","slide":5,"text":"開場","textPreview":"開場","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/kvy50bqp","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/7yp4bqpg","slide":5,"text":"今天要帶走四個成果","textPreview":"今天要帶走四個成果","textChars":9,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/mxgn2l8v","slide":5,"text":"會動的頁面、規格、Bug 回報、Git 存檔","textPreview":"會動的頁面、規格、Bug 回報、Git 存檔","textChars":22,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/9076dg7m","slide":5,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/8zy54v61","slide":5,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/iw6nfz","slide":5,"text":""}
+{"kind":"slide","id":"sl/wrcope","slide":6,"title":"開場","textShapes":6}
+{"kind":"shape","id":"sh/m5cjyt0b","slide":6,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/98n298z2","slide":6,"text":"開場","textPreview":"開場","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/87ul03ih","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/va5kbyh8","slide":6,"text":"第一個承諾","textPreview":"第一個承諾","textChars":5,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/a9w32d0n","slide":6,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/xcn2d8zy","slide":6,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/wbel43id","slide":6,"text":"25 分鐘內，讓一個按鈕真的動起來","textPreview":"25 分鐘內，讓一個按鈕真的動起來","textChars":17,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/jy5kfih4","slide":6,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/wrcope","slide":6,"text":""}
+{"kind":"slide","id":"sl/kk1ek5","slide":7,"title":"第一個成功","textShapes":6}
+{"kind":"shape","id":"sh/udk7exsz","slide":7,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/h0bqpcba","slide":7,"text":"第一個成功","textPreview":"第一個成功","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/wf2pg7a5","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/7a98jit8","slide":7,"text":"打開 CP01","textPreview":"打開 CP01","textChars":7,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/m907axsn","slide":7,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/9cbqlsbe","slide":7,"text":"先不要讀程式碼，直接用瀏覽器開啟","textPreview":"先不要讀程式碼，直接用瀏覽器開啟","textChars":16,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/8b2pcnat","slide":7,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/r6d8vmts","slide":7,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/kk1ek5","slide":7,"text":""}
+{"kind":"slide","id":"sl/w9qlct","slide":8,"title":"第一個成功","textShapes":6}
+{"kind":"shape","id":"sh/o7qh0rax","slide":8,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/nmhg7m9c","slide":8,"text":"第一個成功","textPreview":"第一個成功","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/2l8zyhsr","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/xcjydwre","slide":8,"text":"按一下，分數增加 1","textPreview":"按一下，分數增加 1","textChars":10,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/cbqh4rat","slide":8,"text":"先確認基準版正常，才開始修改","textPreview":"先確認基準版正常，才開始修改","textChars":14,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/bahgb69o","slide":8,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/a98z21s3","slide":8,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/dgfy1cba","slide":8,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/w9qlct","slide":8,"text":""}
+{"kind":"slide","id":"sl/zn69el","slide":9,"title":"第一個成功","textShapes":5}
+{"kind":"shape","id":"sh/25sbydo3","slide":9,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/psju9snu","slide":9,"text":"第一個成功","textPreview":"第一個成功","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/4rat0n69","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/rulcb25k","slide":9,"text":"把它改成你的作品","textPreview":"把它改成你的作品","textChars":8,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/qtcb2xof","slide":9,"text":"修改標題、按鈕文字與分數規則","textPreview":"修改標題、按鈕文字與分數規則","textChars":14,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/dw3udsnq","slide":9,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/cvut4n65","slide":9,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/zn69el","slide":9,"text":""}
+{"kind":"slide","id":"sl/a00wb3","slide":10,"title":"第一個成功","textShapes":6}
+{"kind":"shape","id":"sh/7m1szm1g","slide":10,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/s7a9s7i1","slide":10,"text":"第一個成功","textPreview":"第一個成功","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/t8ja1cjm","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/ih8rmxkz","slide":10,"text":"一次只改一件事","textPreview":"一次只改一件事","textChars":7,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/jihsv214","slide":10,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/kjq9o72p","slide":10,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/5kzaxcja","slide":10,"text":"改完立刻重新整理、操作、比較","textPreview":"改完立刻重新整理、操作、比較","textChars":14,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/2dcry103","slide":10,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/a00wb3","slide":10,"text":""}
+{"kind":"slide","id":"sl/a6i569","slide":11,"title":"第一個成功","textShapes":6}
+{"kind":"shape","id":"sh/i5s7ulk7","slide":11,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/58jq5gjy","slide":11,"text":"第一個成功","textPreview":"第一個成功","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/47apwb2d","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/ra187q14","slide":11,"text":"AI 說完成，不代表完成","textPreview":"AI 說完成，不代表完成","textChars":12,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/69s7ylkj","slide":11,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/tc3q90ju","slide":11,"text":"你必須親手走一次操作流程","textPreview":"你必須親手走一次操作流程","textChars":12,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/sbap0v2p","slide":11,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/fyl8bq10","slide":11,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/a6i569","slide":11,"text":""}
+{"kind":"slide","id":"sl/bkaw7n","slide":12,"title":"第一個成功","textShapes":6}
+{"kind":"shape","id":"sh/4nihgz29","slide":12,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/jm90ne1o","slide":12,"text":"第一個成功","textPreview":"第一個成功","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/il0ze9kj","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/hkril43y","slide":12,"text":"存檔點：第一個作品會動了","textPreview":"存檔點：第一個作品會動了","textChars":12,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/wzihcz2d","slide":12,"text":"保留正常版本，接下來才敢繼續改","textPreview":"保留正常版本，接下來才敢繼續改","textChars":15,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/vypgjuls","slide":12,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/uxgzapk7","slide":12,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/1gbixoj2","slide":12,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/bkaw7n","slide":12,"text":""}
+{"kind":"slide","id":"sl/lboatk","slide":13,"title":"題目與 MVP","textShapes":5}
+{"kind":"shape","id":"sh/bu1wrexk","slide":13,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/cvuxkje5","slide":13,"text":"題目與 MVP","textPreview":"題目與 MVP","textChars":7,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/xw3yt4fa","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/25sfepwn","slide":13,"text":"好題目通常藏在生活裡","textPreview":"好題目通常藏在生活裡","textChars":10,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/nq1wnux8","slide":13,"text":"從自己看過、痛過、反覆遇到的問題開始","textPreview":"從自己看過、痛過、反覆遇到的問題開始","textChars":18,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/oraxgzet","slide":13,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/psjep4fe","slide":13,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/lboatk","slide":13,"text":""}
+{"kind":"slide","id":"sl/a57nw2","slide":14,"title":"題目與 MVP","textShapes":6}
+{"kind":"shape","id":"sh/wnupsbmp","slide":14,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/vmloj6l4","slide":14,"text":"題目與 MVP","textPreview":"題目與 MVP","textChars":7,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/alc7q14j","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/9k36hw3y","slide":14,"text":"一句話說清楚作品","textPreview":"一句話說清楚作品","textChars":8,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/8ju5ormd","slide":14,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/nilofmls","slide":14,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/mhcnmh47","slide":14,"text":"給誰＋解決什麼＋怎麼互動＋得到什麼","textPreview":"給誰＋解決什麼＋怎麼互動＋得到什麼","textChars":17,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/tg76t032","slide":14,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/a57nw2","slide":14,"text":""}
+{"kind":"slide","id":"sl/gs2sg9","slide":15,"title":"題目與 MVP","textShapes":6}
+{"kind":"shape","id":"sh/9cv65kfm","slide":15,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/m94na5wb","slide":15,"text":"題目與 MVP","textPreview":"題目與 MVP","textChars":7,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/nado3axg","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/07258ve5","slide":15,"text":"借鏡不是抄襲","textPreview":"借鏡不是抄襲","textChars":6,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/18b610fq","slide":15,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/e5kn65wz","slide":15,"text":"拆出有效機制，再換成自己的情境與內容","textPreview":"拆出有效機制，再換成自己的情境與內容","textChars":18,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/z6tozaxk","slide":15,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/cj254vet","slide":15,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/gs2sg9","slide":15,"text":""}
+{"kind":"slide","id":"sl/ndbdbi","slide":16,"title":"題目與 MVP","textShapes":6}
+{"kind":"shape","id":"sh/xgj2hs7e","slide":16,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/adsj6x8n","slide":16,"text":"題目與 MVP","textPreview":"題目與 MVP","textChars":7,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/ve1kf2p8","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/8ra14nqh","slide":16,"text":"最小可玩，不是最小可想","textPreview":"最小可玩，不是最小可想","textChars":11,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/9cj2ds72","slide":16,"text":"必須有開始、選擇與結果","textPreview":"必須有開始、選擇與結果","textChars":11,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/mp8j2d8r","slide":16,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/nqhkbipc","slide":16,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/0nq10nql","slide":16,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/ndbdbi","slide":16,"text":""}
+{"kind":"slide","id":"sl/j18t1v","slide":17,"title":"題目與 MVP","textShapes":5}
+{"kind":"shape","id":"sh/s3mh4fyd","slide":17,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/r2d0bahs","slide":17,"text":"題目與 MVP","textPreview":"題目與 MVP","textChars":7,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/6h4z25g7","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/5gvy90z2","slide":17,"text":"把功能分成三堆","textPreview":"把功能分成三堆","textChars":7,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/4fmh0vyh","slide":17,"text":"現在做／之後做／也許不做","textPreview":"現在做／之後做／也許不做","textChars":12,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/jedg7ahw","slide":17,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/idkzy5gb","slide":17,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/j18t1v","slide":17,"text":""}
+{"kind":"slide","id":"sl/p2u0ki","slide":18,"title":"題目與 MVP","textShapes":6}
+{"kind":"shape","id":"sh/vqdozi1o","slide":18,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/gbm58ni9","slide":18,"text":"題目與 MVP","textPreview":"題目與 MVP","textChars":7,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/hcv61sju","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/6lkn2d07","slide":18,"text":"FinFlow 沒有一開始就做多人","textPreview":"FinFlow 沒有一開始就做多人","textChars":17,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/7mdovy1s","slide":18,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/8nm543id","slide":18,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/tov6x8jy","slide":18,"text":"先讓單機規則跑完，再處理同步與房間","textPreview":"先讓單機規則跑完，再處理同步與房間","textChars":17,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/yhknyt0b","slide":18,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/p2u0ki","slide":18,"text":""}
+{"kind":"slide","id":"sl/a567dl","slide":19,"title":"AI 分工","textShapes":6}
+{"kind":"shape","id":"sh/5ojexk3i","slide":19,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/il8fmpk7","slide":19,"text":"AI 分工","textPreview":"AI 分工","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/jmhwvuls","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/wzqdkf21","slide":19,"text":"你與 AI 各自負責什麼","textPreview":"你與 AI 各自負責什麼","textChars":12,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/xkzetk3m","slide":19,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/ax8vi5kv","slide":19,"text":"你定目標與驗收；AI 提案、實作、測試","textPreview":"你定目標與驗收；AI 提案、實作、測試","textChars":19,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/vyhwralg","slide":19,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/gvuxwj25","slide":19,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/a567dl","slide":19,"text":""}
+{"kind":"slide","id":"sl/u5aemn","slide":20,"title":"AI 分工","textShapes":6}
+{"kind":"shape","id":"sh/bq5cjuhk","slide":20,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/crydczi5","slide":20,"text":"AI 分工","textPreview":"AI 分工","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/ds7ul4zq","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/2lwv6p03","slide":20,"text":"模糊需求沒有共同答案","textPreview":"模糊需求沒有共同答案","textChars":10,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/3m5cfuho","slide":20,"text":"「漂亮一點」不能被客觀驗收","textPreview":"「漂亮一點」不能被客觀驗收","textChars":13,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/oned8zit","slide":20,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/ponuh4ze","slide":20,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/mhgvit07","slide":20,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/u5aemn","slide":20,"text":""}
+{"kind":"slide","id":"sl/cfjuck","slide":21,"title":"AI 分工","textShapes":5}
+{"kind":"shape","id":"sh/wnip0fel","slide":21,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/bm98rax0","slide":21,"text":"AI 分工","textPreview":"AI 分工","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/al07y5wf","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/lsbqxkf2","slide":21,"text":"四格需求模板","textPreview":"四格需求模板","textChars":6,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/kr2p4feh","slide":21,"text":"目標、使用者、限制、交付格式","textPreview":"目標、使用者、限制、交付格式","textChars":14,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/jqt8vuxw","slide":21,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/yp072pwb","slide":21,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/cfjuck","slide":21,"text":""}
+{"kind":"slide","id":"sl/6bgq9a","slide":22,"title":"AI 分工","textShapes":6}
+{"kind":"shape","id":"sh/obu5k3ad","slide":22,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/na1obyts","slide":22,"text":"AI 分工","textPreview":"AI 分工","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/m9snits7","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/18j698b2","slide":22,"text":"先規格，後程式","textPreview":"先規格，後程式","textChars":7,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/07a5g3ah","slide":22,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/z61o7ytw","slide":22,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/e5snetsb","slide":22,"text":"文字是零基礎者也能掌握的審核點","textPreview":"文字是零基礎者也能掌握的審核點","textChars":15,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/l4n6lsb6","slide":22,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/6bgq9a","slide":22,"text":""}
+{"kind":"slide","id":"sl/htj905","slide":23,"title":"AI 分工","textShapes":6}
+{"kind":"shape","id":"sh/w3qtcf2p","slide":23,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/v2hcjal4","slide":23,"text":"AI 分工","textPreview":"AI 分工","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/ah8bapkj","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/9gzuhk3y","slide":23,"text":"要求 AI 先復述","textPreview":"要求 AI 先復述","textChars":9,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/8fqt8f2t","slide":23,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/nehcfal8","slide":23,"text":"理解一致後才准動工","textPreview":"理解一致後才准動工","textChars":9,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/mdob65kn","slide":23,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/tcjut4ji","slide":23,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/htj905","slide":23,"text":""}
+{"kind":"slide","id":"sl/e7oahw","slide":24,"title":"AI 分工","textShapes":6}
+{"kind":"shape","id":"sh/9w3ils7q","slide":24,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/mtszqxoz","slide":24,"text":"AI 分工","textPreview":"AI 分工","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/nu1gj2pk","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/0rahon69","slide":24,"text":"交付必須附驗證方式","textPreview":"交付必須附驗證方式","textChars":9,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/1sjyhs7u","slide":24,"text":"完整檔案、摘要、測試、未知事項","textPreview":"完整檔案、摘要、測試、未知事項","textChars":15,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/e5szmdo3","slide":24,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/zq1gfipo","slide":24,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/kneh076d","slide":24,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/e7oahw","slide":24,"text":""}
+{"kind":"slide","id":"sl/phfyg9","slide":25,"title":"DEBUG","textShapes":5}
+{"kind":"shape","id":"sh/h4nedgbu","slide":25,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/u1wfi1s3","slide":25,"text":"DEBUG","textPreview":"DEBUG","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/v25wb6to","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/8zexgrud","slide":25,"text":"Bug 回報只需要四格","textPreview":"Bug 回報只需要四格","textChars":11,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/t0ne9wby","slide":25,"text":"操作、預期、實際、證據","textPreview":"操作、預期、實際、證據","textChars":11,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/6dcfehc7","slide":25,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/7e5w7mts","slide":25,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/phfyg9","slide":25,"text":""}
+{"kind":"slide","id":"sl/aa6n3c","slide":26,"title":"DEBUG","textShapes":6}
+{"kind":"shape","id":"sh/y9kjehs7","slide":26,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/lcb29cry","slide":26,"text":"DEBUG","textPreview":"DEBUG","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/kb21g7ad","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/7etkbm9o","slide":26,"text":"截圖是新手的除錯語言","textPreview":"截圖是新手的除錯語言","textChars":10,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/mdkjihs3","slide":26,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/90v2dwru","slide":26,"text":"重現\n→ 修正\n→ 測試","textPreview":"重現 | → 修正 | → 測試","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/8fm1krq9","slide":26,"text":"圈出位置，附上按了什麼與前後狀態","textPreview":"圈出位置，附上按了什麼與前後狀態","textChars":16,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/v2dkf690","slide":26,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/aa6n3c","slide":26,"text":""}
+{"kind":"slide","id":"sl/cqc7eg","slide":27,"title":"DEBUG","textShapes":6}
+{"kind":"shape","id":"sh/sjm9czep","slide":27,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/rit8juxk","slide":27,"text":"DEBUG","textPreview":"DEBUG","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/6hkrapwz","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/18vqp4fm","slide":27,"text":"怪符號要追根因","textPreview":"怪符號要追根因","textChars":7,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/g7m9gze1","slide":27,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/f6d8nexg","slide":27,"text":"不是把畫面換掉，而是處理編碼與資料來源","textPreview":"不是把畫面換掉，而是處理編碼與資料來源","textChars":19,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/e54re9wv","slide":27,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/pcfatofi","slide":27,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/cqc7eg","slide":27,"text":""}
+{"kind":"slide","id":"sl/pqeq3m","slide":28,"title":"DEBUG","textShapes":6}
+{"kind":"shape","id":"sh/pw36ts3i","slide":28,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/2tcnyx4r","slide":28,"text":"DEBUG","textPreview":"DEBUG","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/3ulorilc","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/gru5wnml","slide":28,"text":"NaN 也能用白話回報","textPreview":"NaN 也能用白話回報","textChars":11,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/hs36ps36","slide":28,"text":"忠實寫出位置與前後數字，不必先懂型別","textPreview":"忠實寫出位置與前後數字，不必先懂型別","textChars":18,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/upsnud4v","slide":28,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/fqlonil0","slide":28,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/83a5s3mp","slide":28,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/pqeq3m","slide":28,"text":""}
+{"kind":"slide","id":"sl/cocq6l","slide":29,"title":"DEBUG","textShapes":5}
+{"kind":"shape","id":"sh/mps3axgb","slide":29,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/9s3mlcf2","slide":29,"text":"DEBUG","textPreview":"DEBUG","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/8rulc7yh","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/z214fix0","slide":29,"text":"NPC 商城死鎖","textPreview":"NPC 商城死鎖","textChars":8,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/y1s36dgf","slide":29,"text":"電腦一直重試不能做的動作，遊戲就不前進","textPreview":"電腦一直重試不能做的動作，遊戲就不前進","textChars":19,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/l4jmhsfq","slide":29,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/k3al8ny5","slide":29,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/cocq6l","slide":29,"text":""}
+{"kind":"slide","id":"sl/lu2m3u","slide":30,"title":"DEBUG","textShapes":6}
+{"kind":"shape","id":"sh/4n6hkjyx","slide":30,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/jmx0behs","slide":30,"text":"DEBUG","textPreview":"DEBUG","textChars":5,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/ilozi9g7","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/hkfi9ozm","slide":30,"text":"修好要留下陷阱","textPreview":"修好要留下陷阱","textChars":7,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/wj6hgjy1","slide":30,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/vixg7ehg","slide":30,"text":"重現\n→ 修正\n→ 測試","textPreview":"重現 | → 修正 | → 測試","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/uhoze9gv","slide":30,"text":"回歸測試讓同一隻蟲下次立刻被抓到","textPreview":"回歸測試讓同一隻蟲下次立刻被抓到","textChars":16,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/1gjil8zq","slide":30,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/lu2m3u","slide":30,"text":""}
+{"kind":"slide","id":"sl/m6dfz2","slide":31,"title":"GITHUB","textShapes":6}
+{"kind":"shape","id":"sh/dwna5ozi","slide":31,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/qtcru9g7","slide":31,"text":"GITHUB","textPreview":"GITHUB","textChars":6,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/ruls3ehs","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/4ru9szy1","slide":31,"text":"GitHub 是作品的時光機","textPreview":"GitHub 是作品的時光機","textChars":14,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/ps3a14zm","slide":31,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/2pcrqpgv","slide":31,"text":"Repository 是專案櫃；commit 是存檔；push 是上雲端","textPreview":"Repository 是專案櫃；commit 是存檔；push 是上雲端","textChars":36,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/3qlszuhg","slide":31,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/onyt43y5","slide":31,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/m6dfz2","slide":31,"text":""}
+{"kind":"slide","id":"sl/y86ra0","slide":32,"title":"GITHUB","textShapes":6}
+{"kind":"shape","id":"sh/m14v69sf","slide":32,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/94fe14b6","slide":32,"text":"GITHUB","textPreview":"GITHUB","textChars":6,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/83md8zal","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/zydwvuto","slide":32,"text":"Commit 要讓人看得懂","textPreview":"Commit 要讓人看得懂","textChars":13,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/yx4v2psj","slide":32,"text":"說明改了什麼，以及如何驗證","textPreview":"說明改了什麼，以及如何驗證","textChars":13,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/l0vex4bu","slide":32,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/0zmd4za9","slide":32,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/juxw7y98","slide":32,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/y86ra0","slide":32,"text":""}
+{"kind":"slide","id":"sl/fm0sw7","slide":33,"title":"GITHUB","textShapes":5}
+{"kind":"shape","id":"sh/4vypgbql","slide":33,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/ju5o7690","slide":33,"text":"GITHUB","textPreview":"GITHUB","textChars":6,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/itw7e18v","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/hsn65wra","slide":33,"text":"先存正常版，再試新功能","textPreview":"先存正常版，再試新功能","textChars":11,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/wrepcrqp","slide":33,"text":"失敗時才能回到清楚的起點","textPreview":"失敗時才能回到清楚的起點","textChars":12,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/vq5o3694","slide":33,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/upw7a18j","slide":33,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/fm0sw7","slide":33,"text":""}
+{"kind":"slide","id":"sl/481mh8","slide":34,"title":"GITHUB","textShapes":6}
+{"kind":"shape","id":"sh/8bepkzmx","slide":34,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/7a58ruls","slide":34,"text":"GITHUB","textPreview":"GITHUB","textChars":6,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/69w7ip47","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/hg7qxo3u","slide":34,"text":"分支是在副本上試驗","textPreview":"分支是在副本上試驗","textChars":9,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/gfypojm9","slide":34,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/vep8velo","slide":34,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/udg7m943","slide":34,"text":"不要直接拿唯一正常版本冒險","textPreview":"不要直接拿唯一正常版本冒險","textChars":13,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/547q1o3q","slide":34,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/481mh8","slide":34,"text":""}
+{"kind":"slide","id":"sl/kcytas","slide":35,"title":"GITHUB","textShapes":6}
+{"kind":"shape","id":"sh/n2x87qt8","slide":35,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/836p0but","slide":35,"text":"GITHUB","textPreview":"GITHUB","textChars":6,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/94fq9gby","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/u5o72lcj","slide":35,"text":"Pages 把作品變成網址","textPreview":"Pages 把作品變成網址","textChars":13,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/v6x8bqt4","slide":35,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/w76p4vup","slide":35,"text":"朋友不用安裝，也能直接打開測試","textPreview":"朋友不用安裝，也能直接打開測試","textChars":15,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/h8fqd0ba","slide":35,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/i98765cv","slide":35,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/kcytas","slide":35,"text":""}
+{"kind":"slide","id":"sl/xzxyrt","slide":36,"title":"GITHUB","textShapes":6}
+{"kind":"shape","id":"sh/nydkjylk","slide":36,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/ojmlc3m5","slide":36,"text":"GITHUB","textPreview":"GITHUB","textChars":6,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/9kvml83q","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/al43ed4b","slide":36,"text":"存檔點：別人能打開你的作品","textPreview":"存檔點：別人能打開你的作品","textChars":13,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/bmd4nilw","slide":36,"text":"從另一台裝置驗證公開網址","textPreview":"從另一台裝置驗證公開網址","textChars":12,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/wnmlgnm1","slide":36,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/xofmps3m","slide":36,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/qpk32t4r","slide":36,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/xzxyrt","slide":36,"text":""}
+{"kind":"slide","id":"sl/03owc9","slide":37,"title":"互測","textShapes":5}
+{"kind":"shape","id":"sh/325k7mt4","slide":37,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/43e10rap","slide":37,"text":"互測","textPreview":"互測","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/p4n29wba","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/q5wj2hsv","slide":37,"text":"你永遠測不完自己的盲點","textPreview":"你永遠測不完自己的盲點","textChars":11,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/r65kbmt0","slide":37,"text":"作者會下意識避開錯誤路徑","textPreview":"作者會下意識避開錯誤路徑","textChars":12,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/c7e14ral","slide":37,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/d8n2dwr6","slide":37,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/03owc9","slide":37,"text":""}
+{"kind":"slide","id":"sl/zbqrqk","slide":38,"title":"互測","textShapes":6}
+{"kind":"shape","id":"sh/zi18z6dw","slide":38,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/kja9sbuh","slide":38,"text":"互測","textPreview":"互測","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/lk3q1wv2","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/adsrmhcf","slide":38,"text":"不要教測試者怎麼玩","textPreview":"不要教測試者怎麼玩","textChars":9,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/be18vmd0","slide":38,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/cfa9orul","slide":38,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/xgjqxwv6","slide":38,"text":"觀察他的第一步與第一次卡住","textPreview":"觀察他的第一步與第一次卡住","textChars":13,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/u9crylcj","slide":38,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/zbqrqk","slide":38,"text":""}
+{"kind":"slide","id":"sl/5fpxp3","slide":39,"title":"互測","textShapes":6}
+{"kind":"shape","id":"sh/8bqx436x","slide":39,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/nahgvy5c","slide":39,"text":"互測","textPreview":"互測","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/m98f2to7","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/xgjy18nu","slide":39,"text":"只問三個問題","textPreview":"只問三個問題","textChars":6,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/wfah8nm9","slide":39,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/ve1gzi5o","slide":39,"text":"卡在哪、哪裡意外、會不會再玩","textPreview":"卡在哪、哪裡意外、會不會再玩","textChars":14,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/adsz6d43","slide":39,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/dkfypona","slide":39,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/5fpxp3","slide":39,"text":""}
+{"kind":"slide","id":"sl/ep5k3s","slide":40,"title":"互測","textShapes":6}
+{"kind":"shape","id":"sh/zyd8vmxw","slide":40,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/0zmporeh","slide":40,"text":"互測","textPreview":"互測","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/1kvqxwf2","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/ml4rq1wn","slide":40,"text":"S19 三人抓出五個 Bug","textPreview":"S19 三人抓出五個 Bug","textChars":14,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/nmx8z6x8","slide":40,"text":"真實使用者就是邊界條件生成器","textPreview":"真實使用者就是邊界條件生成器","textChars":14,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/on69sred","slide":40,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/9ofq1wfy","slide":40,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/2pk7exw3","slide":40,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/ep5k3s","slide":40,"text":""}
+{"kind":"slide","id":"sl/0uuylv","slide":41,"title":"互測","textShapes":5}
+{"kind":"shape","id":"sh/v25gzyh4","slide":41,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/g3ehs3ip","slide":41,"text":"互測","textPreview":"互測","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/h4ny18za","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/i5wzud0f","slide":41,"text":"回饋不是命令","textPreview":"回饋不是命令","textChars":6,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/365g3ih0","slide":41,"text":"先找出問題，再決定解法","textPreview":"先找出問題，再決定解法","textChars":11,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/47ehwnil","slide":41,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/587i5sz6","slide":41,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/0uuylv","slide":41,"text":""}
+{"kind":"slide","id":"sl/0mqhon","slide":42,"title":"互測","textShapes":6}
+{"kind":"shape","id":"sh/rulkvmto","slide":42,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/svu1oru9","slide":42,"text":"互測","textPreview":"互測","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/twn2xcbu","slide":42,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/exwjqhcz","slide":42,"text":"把很難用翻譯成可驗證需求","textPreview":"把很難用翻譯成可驗證需求","textChars":12,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/fy5kzmtk","slide":42,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/gje1sru5","slide":42,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/1kn21wbq","slide":42,"text":"問清楚動作、預期與實際結果","textPreview":"問清楚動作、預期與實際結果","textChars":13,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/2lw3u1cb","slide":42,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/0mqhon","slide":42,"text":""}
+{"kind":"slide","id":"sl/rtyqh4","slide":43,"title":"收尾","textShapes":6}
+{"kind":"shape","id":"sh/uxc769g7","slide":43,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/hk3q1ofy","slide":43,"text":"收尾","textPreview":"收尾","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/gzup8jyd","slide":43,"text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/3ml83yx4","slide":43,"text":"今天你走完一個產品循環","textPreview":"今天你走完一個產品循環","textChars":11,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/ilc7atgj","slide":43,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/5onq5ofu","slide":43,"text":"想法、規格、實作、測試、版本、分享","textPreview":"想法、規格、實作、測試、版本、分享","textChars":17,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/4nupc3yp","slide":43,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/zq1oruxk","slide":43,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/rtyqh4","slide":43,"text":""}
+{"kind":"slide","id":"sl/fyxfc8","slide":44,"title":"收尾","textShapes":6}
+{"kind":"shape","id":"sh/ixg3qhgf","slide":44,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/50r21wzq","slide":44,"text":"收尾","textPreview":"收尾","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/4zylsry5","slide":44,"text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/vupkv2ho","slide":44,"text":"下一步不是增加十個功能","textPreview":"下一步不是增加十個功能","textChars":11,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/utg3mxg3","slide":44,"text":"只選 CP02～CP06 的下一個 checkpoint","textPreview":"只選 CP02～CP06 的下一個 checkpoint","textChars":28,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/hw72xczu","slide":44,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/wvylo7y9","slide":44,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/765kr2hs","slide":44,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/fyxfc8","slide":44,"text":""}
+{"kind":"slide","id":"sl/kr7tsb","slide":45,"title":"收尾","textShapes":5}
+{"kind":"shape","id":"sh/3ehgf2tg","slide":45,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/ofah87ul","slide":45,"text":"收尾","textPreview":"收尾","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/p0jyhcb6","slide":45,"text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/e98z2dcj","slide":45,"text":"完成比完美更重要","textPreview":"完成比完美更重要","textChars":8,"textLines":1,"bbox":[82,150,1090,95]}
+{"kind":"textbox","id":"sh/fahgbit4","slide":45,"text":"每次只增加一點，再留下證據","textPreview":"每次只增加一點，再留下證據","textChars":13,"textLines":1,"bbox":[82,310,1090,130]}
+{"kind":"shape","id":"sh/gbqh4nup","slide":45,"bbox":[82,520,1090,4]}
+{"kind":"textbox","id":"sh/1czydsba","slide":45,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/kr7tsb","slide":45,"text":""}
+{"kind":"slide","id":"sl/0d7vvq","slide":46,"title":"收尾","textShapes":6}
+{"kind":"shape","id":"sh/y1ofi1gv","slide":46,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/lofydwfm","slide":46,"text":"收尾","textPreview":"收尾","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/036xkry1","slide":46,"text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/nqxgf6xs","slide":46,"text":"你的作品可以換成任何主題","textPreview":"你的作品可以換成任何主題","textChars":12,"textLines":1,"bbox":[82,120,700,100]}
+{"kind":"shape","id":"sh/mpofm1g7","slide":46,"bbox":[820,120,340,390]}
+{"kind":"textbox","id":"sh/9szyhgfi","slide":46,"text":"跟做\n→ 驗收\n→ 存檔","textPreview":"跟做 | → 驗收 | → 存檔","textChars":12,"textLines":3,"bbox":[860,185,260,240]}
+{"kind":"textbox","id":"sh/8r6xobyx","slide":46,"text":"財商、創業、健康、旅遊、學習或職涯","textPreview":"財商、創業、健康、旅遊、學習或職涯","textChars":17,"textLines":1,"bbox":[82,285,650,160]}
+{"kind":"textbox","id":"sh/vuhgjqxo","slide":46,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/0d7vvq","slide":46,"text":""}
+{"kind":"slide","id":"sl/yvp4vg","slide":47,"title":"收尾","textShapes":6}
+{"kind":"shape","id":"sh/6hora1w3","slide":47,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/tkfa5wfe","slide":47,"text":"收尾","textPreview":"收尾","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/sj69cret","slide":47,"text":"47","textPreview":"47","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/fmxs76xk","slide":47,"text":"你已經不是只會使用工具的人","textPreview":"你已經不是只會使用工具的人","textChars":13,"textLines":1,"bbox":[82,118,1090,95]}
+{"kind":"shape","id":"sh/elore1wz","slide":47,"bbox":[82,270,1090,190]}
+{"kind":"textbox","id":"sh/18za9gfq","slide":47,"text":"你能把想法變成可操作、可驗收的作品","textPreview":"你能把想法變成可操作、可驗收的作品","textChars":17,"textLines":1,"bbox":[125,300,1000,130]}
+{"kind":"textbox","id":"sh/gn69gbe5","slide":47,"text":"先說清楚，再動手。","textPreview":"先說清楚，再動手。","textChars":9,"textLines":1,"bbox":[82,540,1090,48]}
+{"kind":"textbox","id":"sh/3ahsbqxg","slide":47,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/yvp4vg","slide":47,"text":""}
+{"kind":"slide","id":"sl/swvpg0","slide":48,"title":"收尾","textShapes":6}
+{"kind":"shape","id":"sh/nytwzedc","slide":48,"bbox":[0,0,16,720]}
+{"kind":"textbox","id":"sh/8j2dszex","slide":48,"text":"收尾","textPreview":"收尾","textChars":2,"textLines":1,"bbox":[72,45,600,28]}
+{"kind":"textbox","id":"sh/9kbe14vi","slide":48,"text":"48","textPreview":"48","textChars":2,"textLines":1,"bbox":[1110,42,90,32]}
+{"kind":"textbox","id":"sh/yt0vmpwv","slide":48,"text":"下一座山，由你決定","textPreview":"下一座山，由你決定","textChars":9,"textLines":1,"bbox":[82,120,1090,95]}
+{"kind":"textbox","id":"sh/zu9wvudg","slide":48,"text":"多人連線、卡牌編輯器、內容包或正式產品化","textPreview":"多人連線、卡牌編輯器、內容包或正式產品化","textChars":20,"textLines":1,"bbox":[120,280,1010,130]}
+{"kind":"shape","id":"sh/0vidoze1","slide":48,"bbox":[82,500,1090,90]}
+{"kind":"textbox","id":"sh/lwrex4v6","slide":48,"text":"現在請做：用一個可觀察結果證明你完成了。","textPreview":"現在請做：用一個可觀察結果證明你完成了。","textChars":20,"textLines":1,"bbox":[118,518,1020,54]}
+{"kind":"textbox","id":"sh/ip4fytwz","slide":48,"text":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textPreview":"FINFLOW CHATGPT COURSE · 2-HOUR WORKSHOP · v0.8","textChars":47,"textLines":1,"bbox":[72,666,560,20]}
+{"kind":"notes","id":"nt/swvpg0","slide":48,"text":""}

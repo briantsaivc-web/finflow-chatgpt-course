@@ -15,6 +15,14 @@
 - `instructor/two-hour-run-of-show.md`：120 分鐘講師流程。
 - `instructor/forms/pilot-feedback.md`：試教回饋與觀察表。
 
+## v0.8 兩小時正式工作坊
+
+- `slides/output/FinFlow_兩小時零基礎AI遊戲工作坊_48頁_v0.8.pptx`
+- `instructor/workshop-48-slide-notes.md`
+- `instructor/demo-bugs/`：四個現場故障示範。
+- `instructor/workshop-fallback-plan.md`：120／90／60 分鐘備援。
+- `docs/forms/`：課前與課後問卷。
+
 ## 本地預覽
 
 ```cmd
