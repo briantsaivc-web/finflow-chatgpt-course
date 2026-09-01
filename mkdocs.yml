@@ -20,6 +20,7 @@ nav:
       - P10 測試回饋轉譯卡: prompts/P10.md
   - 講師專區:
       - 100 頁完整授課稿: instructor/full-course-100-teaching-script.md
+  - 兩小時試教: workshop/pilot-guide.md
   - 下載中心: downloads/index.md
   - 更新紀錄: changelog.md
 markdown_extensions:

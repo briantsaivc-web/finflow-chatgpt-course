@@ -9,6 +9,12 @@
 - `examples/checkpoints/CP01～CP06/`：六個可玩階段版本。
 - `docs/prompts/`：可直接複製的 Prompt 卡。
 
+## v0.7 試教現場包
+
+- `workbook/`：可列印、可編輯的學員實作手冊。
+- `instructor/two-hour-run-of-show.md`：120 分鐘講師流程。
+- `instructor/forms/pilot-feedback.md`：試教回饋與觀察表。
+
 ## 本地預覽
 
 ```cmd
