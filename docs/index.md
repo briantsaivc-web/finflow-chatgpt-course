@@ -10,4 +10,15 @@
 - GitHub 版本紀錄
 - 可分享的 GitHub Pages 網址
 
-[開始第一個作品](lessons/01-first-win.md)
+[開始第一個作品](lessons/00-start.md)
+
+## 建議學習順序
+
+1. [先相信自己做得到](lessons/00-start.md)
+2. [找到值得做的題目](lessons/01-idea.md)
+3. [把點子砍成做得完的 MVP](lessons/02-mvp.md)
+4. [跟 AI 寫規格與第一版](lessons/03-spec-build.md)
+
+!!! tip "不用先把全部看完"
+    每一單元都會讓作品前進。照著做、實際打開、實際按按鈕，
+    比一次讀完所有觀念更重要。

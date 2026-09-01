@@ -13,10 +13,25 @@ theme:
     - content.code.copy
 nav:
   - 開始這裡: index.md
-  - 第一個作品: lessons/01-first-win.md
+  - 課程主線:
+      - 單元 0｜先相信自己做得到: lessons/00-start.md
+      - 單元 1｜找到值得做的題目: lessons/01-idea.md
+      - 單元 2｜砍成做得完的 MVP: lessons/02-mvp.md
+      - 單元 3｜跟 AI 寫規格與第一版: lessons/03-spec-build.md
   - Prompt 資源:
       - P01 構想整理卡: prompts/P01-idea.md
+      - P02 MVP 縮減卡: prompts/P02-mvp.md
+      - P03 規格書卡: prompts/P03-spec.md
       - P04 Bug 診斷卡: prompts/P04-debug.md
+      - P05 UI 改版卡: prompts/P05-ui.md
+      - P06 版本交付卡: prompts/P06-release.md
+  - 工作表:
+      - W01 痛點採礦表: worksheets/W01-pain-mining.md
+      - W02 功能三分法: worksheets/W02-mvp.md
+      - W03 三條鐵律: worksheets/W03-rules.md
+      - T01 第一版驗收表: worksheets/T01-acceptance.md
+  - 疑難排解:
+      - HTML 打不開: troubleshooting/html-wont-open.md
   - 更新紀錄: changelog.md
 markdown_extensions:
   - admonition
