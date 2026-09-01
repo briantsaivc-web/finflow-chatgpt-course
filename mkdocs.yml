@@ -1,0 +1,26 @@
+site_name: FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲
+site_description: 以 finflow-chatgpt 為案例的零基礎 AI 遊戲實作課
+site_url: https://briantsaivc-web.github.io/finflow-chatgpt-course/
+repo_url: https://github.com/briantsaivc-web/finflow-chatgpt-course
+repo_name: briantsaivc-web/finflow-chatgpt-course
+theme:
+  name: material
+  language: zh-TW
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+nav:
+  - 開始這裡: index.md
+  - 第一個作品: lessons/01-first-win.md
+  - Prompt 資源:
+      - P01 構想整理卡: prompts/P01-idea.md
+      - P04 Bug 診斷卡: prompts/P04-debug.md
+  - 更新紀錄: changelog.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
