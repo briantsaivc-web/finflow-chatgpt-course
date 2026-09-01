@@ -18,6 +18,10 @@ nav:
       - 單元 1｜找到值得做的題目: lessons/01-idea.md
       - 單元 2｜砍成做得完的 MVP: lessons/02-mvp.md
       - 單元 3｜跟 AI 寫規格與第一版: lessons/03-spec-build.md
+      - 單元 4｜Debug 與回歸測試: lessons/04-debug.md
+      - 單元 5｜GitHub 時光機: lessons/05-github.md
+      - 單元 6｜UI／UX 疊代: lessons/06-ui.md
+      - 單元 7｜朋友實測與上架: lessons/07-test-publish.md
   - Prompt 資源:
       - P01 構想整理卡: prompts/P01-idea.md
       - P02 MVP 縮減卡: prompts/P02-mvp.md
@@ -30,6 +34,18 @@ nav:
       - W02 功能三分法: worksheets/W02-mvp.md
       - W03 三條鐵律: worksheets/W03-rules.md
       - T01 第一版驗收表: worksheets/T01-acceptance.md
+      - T02 Bug 紀錄表: worksheets/T02-bug-log.md
+      - T03 朋友實測表: worksheets/T03-user-test.md
+      - T04 發布檢查表: worksheets/T04-release.md
+  - FinFlow 真實案例:
+      - B01 怪符號與 NaN: cases/B01-symbol-nan.md
+      - B02 NPC 商城死鎖: cases/B02-npc-deadlock.md
+      - B03 三人實測五個 Bug: cases/B03-player-test.md
+  - CMD 指令:
+      - C01 第一次推送: commands/C01-first-push.md
+      - C02 日常更新: commands/C02-daily-push.md
+      - C03 建立分支: commands/C03-branch.md
+      - C04 回到正常版本: commands/C04-recover.md
   - 疑難排解:
       - HTML 打不開: troubleshooting/html-wont-open.md
   - 更新紀錄: changelog.md
