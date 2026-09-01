@@ -10,5 +10,5 @@
 | 5 GitHub | lessons/05-github | 53–62 | 第七章 | repo、commit、push |
 | 6 UI | lessons/06-ui | 63–72 | 第八章 | UI v0.2、資料區 |
 | 7 測試上架 | lessons/07-test-publish | 73–84 | 第九章 | Pages 網址、回饋表 |
-| 8 改造成自己的 | 待製作 | 85–92 | 第十章 | 個人作品 |
-| 9 多人與重構 | 待製作 | 93–100 | 第十一、十二章 | 選修成果 |
+| 8 改造成自己的 | lessons/08-remix | 85–92 | 第十章 | 個人作品 |
+| 9 多人與重構 | lessons/09-multiplayer-architecture | 93–100 | 第十一、十二章 | 選修成果 |

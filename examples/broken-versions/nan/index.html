@@ -1,0 +1,1 @@
+<!doctype html><meta charset="utf-8"><title>NaN 練習版</title><h1>事件結算</h1><p id="cash"></p><button onclick="run()">下一回合</button><script>let money=100;const events=[{name:'獎金',amount:20},{name:'維修費'}];function run(){const e=events[Math.floor(Math.random()*events.length)];money+=e.amount;cash.textContent=`${e.name}後現金：${money}`};cash.textContent=`現金：${money}`</script>

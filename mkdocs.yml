@@ -22,6 +22,10 @@ nav:
       - 單元 5｜GitHub 時光機: lessons/05-github.md
       - 單元 6｜UI／UX 疊代: lessons/06-ui.md
       - 單元 7｜朋友實測與上架: lessons/07-test-publish.md
+      - 單元 8｜改造成自己的作品: lessons/08-remix.md
+      - 單元 9｜多人連線與三層架構: lessons/09-multiplayer-architecture.md
+  - 結業作品:
+      - 下載與使用: capstone.md
   - Prompt 資源:
       - P01 構想整理卡: prompts/P01-idea.md
       - P02 MVP 縮減卡: prompts/P02-mvp.md
