@@ -1,0 +1,4088 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="以 finflow-chatgpt 為案例的零基礎 AI 遊戲實作課">
+      
+      
+      
+        <link rel="canonical" href="https://briantsaivc-web.github.io/finflow-chatgpt-course/instructor/full-course-100-teaching-script/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>FinFlow 零基礎 AI 遊戲課｜100 頁完整授課稿 v0.6 - FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finflow-ai-100-v06" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../.." title="FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲" class="md-header__button md-logo" aria-label="FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FinFlow 零基礎 AI 遊戲課｜100 頁完整授課稿 v0.6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/briantsaivc-web/finflow-chatgpt-course" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    briantsaivc-web/finflow-chatgpt-course
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲" class="md-nav__button md-logo" aria-label="FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/briantsaivc-web/finflow-chatgpt-course" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    briantsaivc-web/finflow-chatgpt-course
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    開始這裡
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lessons/01-first-win/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一個作品
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Prompt 資源
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt 資源
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/P01-idea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P01 構想整理卡
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/P04-debug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P04 Bug 診斷卡
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    更新紀錄
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 封面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 成品先行
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 作者起點
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 五天二十次疊代
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. AI 神話破解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 課程成果牆
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 你不需要會什麼
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 第一個承諾
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 好點子不是憑空想出來
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-finflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. FinFlow 的起心動念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 痛點採礦表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 15 分鐘小成功
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 第一次打開作品
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 第一次改需求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 借鏡不是抄襲
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. 機制轉譯練習
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 一句話作品公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. 存檔點 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. 完整版陷阱
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 最小可玩，不是最小可想
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 三堆功能法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-finflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. FinFlow 原始範圍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. 三條鐵律
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. 白話理解鐵律
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. 學員版三條鐵律
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. 結業作品定案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. 刪功能實作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. 存檔點 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. AI 分工地圖
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. 模糊需求為何危險
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      31. 四格需求模板
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32. 先規格、後程式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      33. 規格書提示詞
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      34. 讀規格只看五件事
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      35. AI 不確定時必須列出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      36. 要求 AI 先復述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      37. 生成第一版程式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      38. 交付格式要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      39. 第一次人工驗收
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      40. 存檔點 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      41. AI 說完成，不代表真的完成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      42. Bug 回報公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      43. 截圖就是新手的除錯語言
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      44. 怪符號案例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-nan" class="md-nav__link">
+    <span class="md-ellipsis">
+      45. NaN 案例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      46. 先重現，再修復
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      47. 回歸測試白話版
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-npc" class="md-nav__link">
+    <span class="md-ellipsis">
+      48. 六人 NPC 商城死鎖案例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    <span class="md-ellipsis">
+      49. 修正的完成定義
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50" class="md-nav__link">
+    <span class="md-ellipsis">
+      50. 第二意見法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      51. 不要一次修十件事
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      52. 存檔點 4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      53. 為什麼需要時光機
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      54. 三個白話名詞
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-github-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      55. GitHub 帳號與 Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      56. 第一次 commit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      57. 第一次 push
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    <span class="md-ellipsis">
+      58. 分支是什麼
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    <span class="md-ellipsis">
+      59. 變更說明格式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#60" class="md-nav__link">
+    <span class="md-ellipsis">
+      60. 版本命名不用複雜
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      61. 回退演示
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      62. 存檔點 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      63. UI 與規則是兩件事
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      64. 先畫再說
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-finflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      65. FinFlow 輪盤四次改版
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      66. 一次只改一區
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      67. 漸進揭露
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68" class="md-nav__link">
+    <span class="md-ellipsis">
+      68. 跨螢幕檢查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69" class="md-nav__link">
+    <span class="md-ellipsis">
+      69. 視覺改版的保證題
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#70" class="md-nav__link">
+    <span class="md-ellipsis">
+      70. 資料與畫面開始分家
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      71. 自己加一張卡
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      72. 存檔點 6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      73. 自己永遠測不完自己的盲點
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      74. 三種測試者
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      75. 五分鐘測試腳本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      76. 只問三個問題
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#77-s19-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      77. S19 三人抓出五個 bug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#78" class="md-nav__link">
+    <span class="md-ellipsis">
+      78. 把「很難用」翻譯成需求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#79" class="md-nav__link">
+    <span class="md-ellipsis">
+      79. 回饋不是命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#80" class="md-nav__link">
+    <span class="md-ellipsis">
+      80. 發布前七項清單
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      81. GitHub Pages 白話版
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      82. 第一次免費上架
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      83. 分享與收集回饋
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      84. 存檔點 7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      85. 複製不是畢業
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86" class="md-nav__link">
+    <span class="md-ellipsis">
+      86. 換主題
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#87" class="md-nav__link">
+    <span class="md-ellipsis">
+      87. 換資料
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#88" class="md-nav__link">
+    <span class="md-ellipsis">
+      88. 換規則
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#89" class="md-nav__link">
+    <span class="md-ellipsis">
+      89. 換畫面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#90" class="md-nav__link">
+    <span class="md-ellipsis">
+      90. 內容一致性提示詞
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      91. 作品發表模板
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      92. 正式畢業
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      93. 先問要不要多人
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-firebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      94. Firebase 白話版
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95" class="md-nav__link">
+    <span class="md-ellipsis">
+      95. 房間、玩家、動作紀錄
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96" class="md-nav__link">
+    <span class="md-ellipsis">
+      96. 鎖步同步白話版
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#97" class="md-nav__link">
+    <span class="md-ellipsis">
+      97. 多人最常見的坑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#98" class="md-nav__link">
+    <span class="md-ellipsis">
+      98. 安全網先於重構
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99" class="md-nav__link">
+    <span class="md-ellipsis">
+      99. 從單一大檔案走向三層
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    <span class="md-ellipsis">
+      100. 下一座山
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="finflow-ai-100-v06">FinFlow 零基礎 AI 遊戲課｜100 頁完整授課稿 v0.6</h1>
+<blockquote>
+<p>每頁均包含講法、案例、操作、Prompt、預期結果、卡點與驗收。投影片負責理解，本檔負責授課。</p>
+</blockquote>
+<h2 id="1">1. 封面</h2>
+<p><strong>核心句</strong>：不會寫程式，照樣做出一款真的遊戲。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：不會寫程式，照樣做出一款真的遊戲。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「封面」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「封面」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>本頁任務：封面。
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="2">2. 成品先行</h2>
+<p><strong>核心句</strong>：直接播放 FinFlow 單機、多人房間、玩家操作片段。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：直接播放 FinFlow 單機、多人房間、玩家操作片段。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「成品先行」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「成品先行」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>本頁任務：成品先行。
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="3">3. 作者起點</h2>
+<p><strong>核心句</strong>：「我有財商教育構想，但我不會寫程式。」</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：「我有財商教育構想，但我不會寫程式。」。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+Brian 從財商教育需求出發，但沒有程式背景；課程必須保留這個真實起點。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「作者起點」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>本頁任務：作者起點。
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="4">4. 五天二十次疊代</h2>
+<p><strong>核心句</strong>：不是一次生成，是一次次修出來。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：不是一次生成，是一次次修出來。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+FinFlow 在 5 天內經過 20 次疊代；重點是密集的小交付，不是一次生成。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「五天二十次疊代」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>本頁任務：五天二十次疊代。
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="5-ai">5. AI 神話破解</h2>
+<p><strong>核心句</strong>：AI 不是魔法按鈕；你決策、AI 動手。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：AI 不是魔法按鈕；你決策、AI 動手。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「AI 神話破解」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「AI 神話破解」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>本頁任務：AI 神話破解。
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="6">6. 課程成果牆</h2>
+<p><strong>核心句</strong>：規格書、遊戲、網址、測試紀錄、朋友回饋。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：規格書、遊戲、網址、測試紀錄、朋友回饋。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「課程成果牆」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「課程成果牆」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>本頁任務：課程成果牆。
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="7">7. 你不需要會什麼</h2>
+<p><strong>核心句</strong>：程式語法、伺服器、資料庫都不是起點。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：程式語法、伺服器、資料庫都不是起點。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「你不需要會什麼」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「你不需要會什麼」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>本頁任務：你不需要會什麼。
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="8">8. 第一個承諾</h2>
+<p><strong>核心句</strong>：今天結束前，你會讓一個按鈕真的動起來。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：今天結束前，你會讓一個按鈕真的動起來。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第一個承諾」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第一個承諾」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>請先不要寫程式。用三句話復述：我要完成的作品、今天的最小成果、如何判斷它真的完成。
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>本頁任務：第一個承諾。
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="9">9. 好點子不是憑空想出來</h2>
+<p><strong>核心句</strong>：痛點、經驗、經典、重新組合。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：痛點、經驗、經典、重新組合。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「好點子不是憑空想出來」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「好點子不是憑空想出來」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>本頁任務：好點子不是憑空想出來。
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="10-finflow">10. FinFlow 的起心動念</h2>
+<p><strong>核心句</strong>：財務情商需要安全的練習場。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：財務情商需要安全的練習場。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「FinFlow 的起心動念」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「FinFlow 的起心動念」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>本頁任務：FinFlow 的起心動念。
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="11">11. 痛點採礦表</h2>
+<p><strong>核心句</strong>：「我常看到誰，在哪件事上卡住？」</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：「我常看到誰，在哪件事上卡住？」。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「痛點採礦表」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「痛點採礦表」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>本頁任務：痛點採礦表。
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="12-15">12. 15 分鐘小成功</h2>
+<p><strong>核心句</strong>：請 AI 產生一個有計分按鈕的 HTML。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：請 AI 產生一個有計分按鈕的 HTML。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「15 分鐘小成功」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「15 分鐘小成功」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>本頁任務：15 分鐘小成功。
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="13">13. 第一次打開作品</h2>
+<p><strong>核心句</strong>：下載、改名、用瀏覽器開啟。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：下載、改名、用瀏覽器開啟。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第一次打開作品」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第一次打開作品」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>本頁任務：第一次打開作品。
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="14">14. 第一次改需求</h2>
+<p><strong>核心句</strong>：把按鈕文字、顏色與分數規則改成自己的。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：把按鈕文字、顏色與分數規則改成自己的。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第一次改需求」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第一次改需求」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>本頁任務：第一次改需求。
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="15">15. 借鏡不是抄襲</h2>
+<p><strong>核心句</strong>：拆出經典作品的「有效機制」。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：拆出經典作品的「有效機制」。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「借鏡不是抄襲」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「借鏡不是抄襲」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>本頁任務：借鏡不是抄襲。
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="16">16. 機制轉譯練習</h2>
+<p><strong>核心句</strong>：大富翁的格子、卡牌的選擇、RPG 的成長。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：大富翁的格子、卡牌的選擇、RPG 的成長。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「機制轉譯練習」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「機制轉譯練習」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>本頁任務：機制轉譯練習。
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="17">17. 一句話作品公式</h2>
+<p><strong>核心句</strong>：給誰＋解決什麼＋用什麼互動＋得到什麼結果。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：給誰＋解決什麼＋用什麼互動＋得到什麼結果。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「一句話作品公式」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「一句話作品公式」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>本頁任務：一句話作品公式。
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="18-1">18. 存檔點 1</h2>
+<p><strong>核心句</strong>：完成一頁式構想卡與第一個可互動頁面。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：完成一頁式構想卡與第一個可互動頁面。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「存檔點 1」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「存檔點 1」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>請把我的生活經驗整理成一個互動作品：目標使用者、痛點、核心選擇、立即回饋。資訊不足請列問題，不要自行補設定。
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>本頁任務：存檔點 1。
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="19">19. 完整版陷阱</h2>
+<p><strong>核心句</strong>：新手不是做不到，是一次想做太多。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：新手不是做不到，是一次想做太多。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「完整版陷阱」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「完整版陷阱」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>本頁任務：完整版陷阱。
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="20">20. 最小可玩，不是最小可想</h2>
+<p><strong>核心句</strong>：MVP 必須有開始、選擇、結果。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：MVP 必須有開始、選擇、結果。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「最小可玩，不是最小可想」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「最小可玩，不是最小可想」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>本頁任務：最小可玩，不是最小可想。
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="21">21. 三堆功能法</h2>
+<p><strong>核心句</strong>：現在做／之後做／也許不做。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：現在做／之後做／也許不做。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「三堆功能法」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「三堆功能法」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>本頁任務：三堆功能法。
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="22-finflow">22. FinFlow 原始範圍</h2>
+<p><strong>核心句</strong>：從有限職業、事件與股票開始。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：從有限職業、事件與股票開始。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+原始 MVP 從有限職業、事件、股票與 NPC 性格開始，沒有一開始就做完全部願景。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「FinFlow 原始範圍」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>本頁任務：FinFlow 原始範圍。
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="23">23. 三條鐵律</h2>
+<p><strong>核心句</strong>：引擎與畫面分離、資料驅動、金流留痕。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：引擎與畫面分離、資料驅動、金流留痕。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+三條鐵律：引擎與 UI 分離、資料驅動、每筆金流留下分錄。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「三條鐵律」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>本頁任務：三條鐵律。
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="24">24. 白話理解鐵律</h2>
+<p><strong>核心句</strong>：你不用會修車，也要知道煞車不能省。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：你不用會修車，也要知道煞車不能省。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「白話理解鐵律」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「白話理解鐵律」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>本頁任務：白話理解鐵律。
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="25">25. 學員版三條鐵律</h2>
+<p><strong>核心句</strong>：單一 HTML、資料集中、每個選擇都有結果。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：單一 HTML、資料集中、每個選擇都有結果。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「學員版三條鐵律」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「學員版三條鐵律」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>本頁任務：學員版三條鐵律。
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="26">26. 結業作品定案</h2>
+<p><strong>核心句</strong>：1 玩家、1 NPC、15 回合、10 張事件。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：1 玩家、1 NPC、15 回合、10 張事件。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「結業作品定案」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「結業作品定案」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>本頁任務：結業作品定案。
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="27">27. 刪功能實作</h2>
+<p><strong>核心句</strong>：親手劃掉多人、登入、商城與動畫。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：親手劃掉多人、登入、商城與動畫。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「刪功能實作」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「刪功能實作」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>本頁任務：刪功能實作。
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="28-2">28. 存檔點 2</h2>
+<p><strong>核心句</strong>：完成 MVP 清單、鐵律與不做清單。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：完成 MVP 清單、鐵律與不做清單。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「存檔點 2」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「存檔點 2」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>請把功能分成「現在做／之後做／也許不做」，並把現在做壓縮成有開始、選擇、結果的最小可玩版本。
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>本頁任務：存檔點 2。
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="29-ai">29. AI 分工地圖</h2>
+<p><strong>核心句</strong>：你負責目標與驗收，AI 負責提案與實作。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：你負責目標與驗收，AI 負責提案與實作。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「AI 分工地圖」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「AI 分工地圖」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>本頁任務：AI 分工地圖。
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="30">30. 模糊需求為何危險</h2>
+<p><strong>核心句</strong>：「幫我做漂亮一點」沒有共同答案。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：「幫我做漂亮一點」沒有共同答案。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「模糊需求為何危險」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「模糊需求為何危險」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>本頁任務：模糊需求為何危險。
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="31">31. 四格需求模板</h2>
+<p><strong>核心句</strong>：目標、使用者、限制、交付格式。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：目標、使用者、限制、交付格式。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「四格需求模板」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「四格需求模板」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>本頁任務：四格需求模板。
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="32">32. 先規格、後程式</h2>
+<p><strong>核心句</strong>：文字是程式小白可以掌握的審核點。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：文字是程式小白可以掌握的審核點。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「先規格、後程式」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「先規格、後程式」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>本頁任務：先規格、後程式。
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="33">33. 規格書提示詞</h2>
+<p><strong>核心句</strong>：可直接複製的完整範本。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：可直接複製的完整範本。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「規格書提示詞」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「規格書提示詞」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>本頁任務：規格書提示詞。
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="34">34. 讀規格只看五件事</h2>
+<p><strong>核心句</strong>：玩法、資料、流程、例外、完成條件。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：玩法、資料、流程、例外、完成條件。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「讀規格只看五件事」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「讀規格只看五件事」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>本頁任務：讀規格只看五件事。
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="35-ai">35. AI 不確定時必須列出</h2>
+<p><strong>核心句</strong>：禁止默默替你做重大決定。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：禁止默默替你做重大決定。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「AI 不確定時必須列出」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「AI 不確定時必須列出」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>本頁任務：AI 不確定時必須列出。
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="36-ai">36. 要求 AI 先復述</h2>
+<p><strong>核心句</strong>：確認雙方理解一致再動工。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：確認雙方理解一致再動工。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「要求 AI 先復述」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「要求 AI 先復述」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>本頁任務：要求 AI 先復述。
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="37">37. 生成第一版程式</h2>
+<p><strong>核心句</strong>：依已核可規格產生單一 HTML。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：依已核可規格產生單一 HTML。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「生成第一版程式」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「生成第一版程式」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>本頁任務：生成第一版程式。
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="38">38. 交付格式要求</h2>
+<p><strong>核心句</strong>：完整檔案、版本號、變更說明、測試方式。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：完整檔案、版本號、變更說明、測試方式。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「交付格式要求」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「交付格式要求」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>本頁任務：交付格式要求。
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="39">39. 第一次人工驗收</h2>
+<p><strong>核心句</strong>：從開啟、操作到結算逐項勾選。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：從開啟、操作到結算逐項勾選。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第一次人工驗收」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第一次人工驗收」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>本頁任務：第一次人工驗收。
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="40-3">40. 存檔點 3</h2>
+<p><strong>核心句</strong>：完成規格書 v1 與第一個完整可玩版本。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：完成規格書 v1 與第一個完整可玩版本。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「存檔點 3」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「存檔點 3」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>先產出白話規格書，包含玩法、資料、流程、例外情況與驗收條件。我核可前不要寫程式。
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>本頁任務：存檔點 3。
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="41-ai">41. AI 說完成，不代表真的完成</h2>
+<p><strong>核心句</strong>：驗收責任仍在你。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：驗收責任仍在你。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「AI 說完成，不代表真的完成」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「AI 說完成，不代表真的完成」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>本頁任務：AI 說完成，不代表真的完成。
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="42-bug">42. Bug 回報公式</h2>
+<p><strong>核心句</strong>：做了什麼＋預期什麼＋實際什麼＋證據。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：做了什麼＋預期什麼＋實際什麼＋證據。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「Bug 回報公式」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「Bug 回報公式」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>本頁任務：Bug 回報公式。
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="43">43. 截圖就是新手的除錯語言</h2>
+<p><strong>核心句</strong>：圈出異常位置直接問。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：圈出異常位置直接問。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「截圖就是新手的除錯語言」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「截圖就是新手的除錯語言」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>本頁任務：截圖就是新手的除錯語言。
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="44">44. 怪符號案例</h2>
+<p><strong>核心句</strong>：外行描述也能導向根因修復。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：外行描述也能導向根因修復。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+怪符號不是只把畫面文字換掉；要追到編碼、來源資料與輸出流程。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「怪符號案例」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>本頁任務：怪符號案例。
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="45-nan">45. NaN 案例</h2>
+<p><strong>核心句</strong>：看不懂錯誤字樣也可以如實回報。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：看不懂錯誤字樣也可以如實回報。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+畫面出現 NaN 時，新手只要忠實回報操作、位置與前後數字，不必先懂型別轉換。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「NaN 案例」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>本頁任務：NaN 案例。
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="46">46. 先重現，再修復</h2>
+<p><strong>核心句</strong>：如果不能穩定重現，就很難證明修好。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：如果不能穩定重現，就很難證明修好。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「先重現，再修復」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「先重現，再修復」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>本頁任務：先重現，再修復。
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="47">47. 回歸測試白話版</h2>
+<p><strong>核心句</strong>：替這隻蟲設一個永遠抓得到它的陷阱。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：替這隻蟲設一個永遠抓得到它的陷阱。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「回歸測試白話版」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「回歸測試白話版」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>本頁任務：回歸測試白話版。
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="48-npc">48. 六人 NPC 商城死鎖案例</h2>
+<p><strong>核心句</strong>：電腦一直想做不能做的動作。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：電腦一直想做不能做的動作。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+六人局 NPC 卡在商城冷卻：NPC 持續重試不可能完成的動作，造成狀態機無法前進。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「六人 NPC 商城死鎖案例」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>本頁任務：六人 NPC 商城死鎖案例。
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="49">49. 修正的完成定義</h2>
+<p><strong>核心句</strong>：原問題失敗、修改後通過、其他流程沒壞。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：原問題失敗、修改後通過、其他流程沒壞。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「修正的完成定義」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「修正的完成定義」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>本頁任務：修正的完成定義。
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="50">50. 第二意見法</h2>
+<p><strong>核心句</strong>：重大修正可用另一個 AI 交叉檢查。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：重大修正可用另一個 AI 交叉檢查。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第二意見法」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第二意見法」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>本頁任務：第二意見法。
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="51">51. 不要一次修十件事</h2>
+<p><strong>核心句</strong>：縮小改動範圍才知道是哪一刀有效。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：縮小改動範圍才知道是哪一刀有效。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「不要一次修十件事」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「不要一次修十件事」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>本頁任務：不要一次修十件事。
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="52-4">52. 存檔點 4</h2>
+<p><strong>核心句</strong>：完成 bug 紀錄、修正版與至少一項回歸測試。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：完成 bug 紀錄、修正版與至少一項回歸測試。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「存檔點 4」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「存檔點 4」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>我做了【操作】，預期【結果】，實際看到【異常】。請先提出可重現步驟與最可能根因，再做最小修正並新增回歸測試。
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>本頁任務：存檔點 4。
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="53">53. 為什麼需要時光機</h2>
+<p><strong>核心句</strong>：AI 改壞時，能回到上一個正常版本。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：AI 改壞時，能回到上一個正常版本。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「為什麼需要時光機」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「為什麼需要時光機」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>本頁任務：為什麼需要時光機。
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="54">54. 三個白話名詞</h2>
+<p><strong>核心句</strong>：Repository＝專案櫃；commit＝存檔；push＝上雲端。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：Repository＝專案櫃；commit＝存檔；push＝上雲端。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「三個白話名詞」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「三個白話名詞」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>本頁任務：三個白話名詞。
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="55-github-repository">55. GitHub 帳號與 Repository</h2>
+<p><strong>核心句</strong>：一步一步建立專案。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：一步一步建立專案。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「GitHub 帳號與 Repository」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「GitHub 帳號與 Repository」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>本頁任務：GitHub 帳號與 Repository。
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="56-commit">56. 第一次 commit</h2>
+<p><strong>核心句</strong>：替版本寫一句人類看得懂的說明。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：替版本寫一句人類看得懂的說明。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第一次 commit」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第一次 commit」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>本頁任務：第一次 commit。
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="57-push">57. 第一次 push</h2>
+<p><strong>核心句</strong>：把本機成果推到 GitHub。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：把本機成果推到 GitHub。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第一次 push」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第一次 push」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>本頁任務：第一次 push。
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="58">58. 分支是什麼</h2>
+<p><strong>核心句</strong>：在副本試驗，不直接動正式版。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：在副本試驗，不直接動正式版。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「分支是什麼」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「分支是什麼」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>本頁任務：分支是什麼。
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="59">59. 變更說明格式</h2>
+<p><strong>核心句</strong>：做了什麼、為什麼、怎麼驗證、意外發現。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：做了什麼、為什麼、怎麼驗證、意外發現。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「變更說明格式」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「變更說明格式」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>本頁任務：變更說明格式。
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="60">60. 版本命名不用複雜</h2>
+<p><strong>核心句</strong>：v0.1、v0.2 或 S1、S2 能排序就好。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：v0.1、v0.2 或 S1、S2 能排序就好。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「版本命名不用複雜」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「版本命名不用複雜」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>本頁任務：版本命名不用複雜。
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="61">61. 回退演示</h2>
+<p><strong>核心句</strong>：故意改壞，再從上一個 commit 找回來。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：故意改壞，再從上一個 commit 找回來。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「回退演示」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「回退演示」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>本頁任務：回退演示。
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="62-5">62. 存檔點 5</h2>
+<p><strong>核心句</strong>：GitHub 上看得到完整作品與版本歷史。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：GitHub 上看得到完整作品與版本歷史。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「存檔點 5」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「存檔點 5」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>請列出這次改動應包含的檔案、commit 訊息、驗證方式與回退方法，不要執行破壞性 Git 指令。
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>本頁任務：存檔點 5。
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="63-ui">63. UI 與規則是兩件事</h2>
+<p><strong>核心句</strong>：改排版不該改到遊戲數值。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：改排版不該改到遊戲數值。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「UI 與規則是兩件事」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「UI 與規則是兩件事」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>本頁任務：UI 與規則是兩件事。
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="64">64. 先畫再說</h2>
+<p><strong>核心句</strong>：手繪、Excel 方格或截圖註記都能溝通。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：手繪、Excel 方格或截圖註記都能溝通。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「先畫再說」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「先畫再說」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>本頁任務：先畫再說。
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="65-finflow">65. FinFlow 輪盤四次改版</h2>
+<p><strong>核心句</strong>：畫面反覆調整是正常過程。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：畫面反覆調整是正常過程。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+FinFlow 輪盤經過四次版面調整；視覺反覆修改並不代表專案失敗。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「FinFlow 輪盤四次改版」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>本頁任務：FinFlow 輪盤四次改版。
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="66">66. 一次只改一區</h2>
+<p><strong>核心句</strong>：先資訊層級，再位置，再配色與裝飾。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：先資訊層級，再位置，再配色與裝飾。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「一次只改一區」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「一次只改一區」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>本頁任務：一次只改一區。
+<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="67">67. 漸進揭露</h2>
+<p><strong>核心句</strong>：新手只看必要資訊，熟練後再增加細節。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：新手只看必要資訊，熟練後再增加細節。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「漸進揭露」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「漸進揭露」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>本頁任務：漸進揭露。
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="68">68. 跨螢幕檢查</h2>
+<p><strong>核心句</strong>：桌機、手機與不同縮放比例都要看。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：桌機、手機與不同縮放比例都要看。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「跨螢幕檢查」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「跨螢幕檢查」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>本頁任務：跨螢幕檢查。
+<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="69">69. 視覺改版的保證題</h2>
+<p><strong>核心句</strong>：要求 AI 證明規則與數值沒有變。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：要求 AI 證明規則與數值沒有變。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+改 UI 後仍要跑核心引擎模擬，證明規則與數值沒有被畫面改動。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「視覺改版的保證題」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>本頁任務：視覺改版的保證題。
+<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="70">70. 資料與畫面開始分家</h2>
+<p><strong>核心句</strong>：卡片資料集中放，不散落整份程式。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：卡片資料集中放，不散落整份程式。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「資料與畫面開始分家」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「資料與畫面開始分家」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>本頁任務：資料與畫面開始分家。
+<a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="71">71. 自己加一張卡</h2>
+<p><strong>核心句</strong>：只改資料區，不動遊戲流程。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：只改資料區，不動遊戲流程。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「自己加一張卡」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「自己加一張卡」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>本頁任務：自己加一張卡。
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="72-6">72. 存檔點 6</h2>
+<p><strong>核心句</strong>：完成可理解版面與第一筆資料驅動擴充。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：完成可理解版面與第一筆資料驅動擴充。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「存檔點 6」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「存檔點 6」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>只調整【指定畫面區域】，不得改動遊戲規則與數值。交付前列出 UI 變更與核心邏輯未變的驗證證據。
+<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>本頁任務：存檔點 6。
+<a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="73">73. 自己永遠測不完自己的盲點</h2>
+<p><strong>核心句</strong>：你會下意識走正確路徑。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：你會下意識走正確路徑。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「自己永遠測不完自己的盲點」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「自己永遠測不完自己的盲點」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>本頁任務：自己永遠測不完自己的盲點。
+<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="74">74. 三種測試者</h2>
+<p><strong>核心句</strong>：完全新手、目標使用者、故意亂按的人。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：完全新手、目標使用者、故意亂按的人。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「三種測試者」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「三種測試者」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>本頁任務：三種測試者。
+<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="75">75. 五分鐘測試腳本</h2>
+<p><strong>核心句</strong>：不教他，觀察他怎麼開始。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：不教他，觀察他怎麼開始。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「五分鐘測試腳本」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「五分鐘測試腳本」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>本頁任務：五分鐘測試腳本。
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="76">76. 只問三個問題</h2>
+<p><strong>核心句</strong>：卡在哪、哪裡意外、會不會再玩。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：卡在哪、哪裡意外、會不會再玩。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「只問三個問題」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「只問三個問題」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>本頁任務：只問三個問題。
+<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="77-s19-bug">77. S19 三人抓出五個 bug</h2>
+<p><strong>核心句</strong>：真實使用者就是邊界條件生成器。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：真實使用者就是邊界條件生成器。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+S19 三位真實玩家抓出五個開發者沒看到的問題，證明測試者會自然產生邊界條件。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「S19 三人抓出五個 bug」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>本頁任務：S19 三人抓出五個 bug。
+<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="78">78. 把「很難用」翻譯成需求</h2>
+<p><strong>核心句</strong>：追問動作、預期與實際結果。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：追問動作、預期與實際結果。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「把「很難用」翻譯成需求」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「把「很難用」翻譯成需求」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>本頁任務：把「很難用」翻譯成需求。
+<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="79">79. 回饋不是命令</h2>
+<p><strong>核心句</strong>：先找問題，再決定解法。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：先找問題，再決定解法。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「回饋不是命令」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「回饋不是命令」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a>本頁任務：回饋不是命令。
+<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="80">80. 發布前七項清單</h2>
+<p><strong>核心句</strong>：核心流程、手機畫面、重開、版本、說明等。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：核心流程、手機畫面、重開、版本、說明等。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「發布前七項清單」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「發布前七項清單」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a>本頁任務：發布前七項清單。
+<a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="81-github-pages">81. GitHub Pages 白話版</h2>
+<p><strong>核心句</strong>：把 Repository 變成任何人可開的網址。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：把 Repository 變成任何人可開的網址。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+GitHub Pages 把 Repository 內容部署成公開網址，讓測試不再依賴傳送本機檔案。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「GitHub Pages 白話版」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a>本頁任務：GitHub Pages 白話版。
+<a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="82">82. 第一次免費上架</h2>
+<p><strong>核心句</strong>：啟用 Pages，取得公開網址。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：啟用 Pages，取得公開網址。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「第一次免費上架」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「第一次免費上架」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-81-2" name="__codelineno-81-2" href="#__codelineno-81-2"></a>本頁任務：第一次免費上架。
+<a id="__codelineno-81-3" name="__codelineno-81-3" href="#__codelineno-81-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="83">83. 分享與收集回饋</h2>
+<p><strong>核心句</strong>：找 2～3 位朋友完成實測表。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：找 2～3 位朋友完成實測表。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「分享與收集回饋」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「分享與收集回饋」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a>本頁任務：分享與收集回饋。
+<a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="84-7">84. 存檔點 7</h2>
+<p><strong>核心句</strong>：作品真的能被別人在另一台裝置打開。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：作品真的能被別人在另一台裝置打開。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「存檔點 7」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「存檔點 7」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>請把測試者的原話轉成：觀察到的行為、可能問題、尚待確認、建議驗證；不要直接把意見當成解法。
+<a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a>本頁任務：存檔點 7。
+<a id="__codelineno-83-3" name="__codelineno-83-3" href="#__codelineno-83-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="85">85. 複製不是畢業</h2>
+<p><strong>核心句</strong>：改造才會形成真正能力。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：改造才會形成真正能力。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「複製不是畢業」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「複製不是畢業」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a>本頁任務：複製不是畢業。
+<a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="86">86. 換主題</h2>
+<p><strong>核心句</strong>：財商可改成創業、健康、旅遊、學習或職涯。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：財商可改成創業、健康、旅遊、學習或職涯。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「換主題」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「換主題」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-85-2" name="__codelineno-85-2" href="#__codelineno-85-2"></a>本頁任務：換主題。
+<a id="__codelineno-85-3" name="__codelineno-85-3" href="#__codelineno-85-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="87">87. 換資料</h2>
+<p><strong>核心句</strong>：職業卡、事件卡與誘惑卡改成你的生活經驗。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：職業卡、事件卡與誘惑卡改成你的生活經驗。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「換資料」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「換資料」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a>本頁任務：換資料。
+<a id="__codelineno-86-3" name="__codelineno-86-3" href="#__codelineno-86-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="88">88. 換規則</h2>
+<p><strong>核心句</strong>：分數、回合數、風險與勝負條件至少改一項。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：分數、回合數、風險與勝負條件至少改一項。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「換規則」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「換規則」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-87-2" name="__codelineno-87-2" href="#__codelineno-87-2"></a>本頁任務：換規則。
+<a id="__codelineno-87-3" name="__codelineno-87-3" href="#__codelineno-87-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="89">89. 換畫面</h2>
+<p><strong>核心句</strong>：用自己的配色、標題與敘事語氣。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：用自己的配色、標題與敘事語氣。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「換畫面」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「換畫面」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-88-2" name="__codelineno-88-2" href="#__codelineno-88-2"></a>本頁任務：換畫面。
+<a id="__codelineno-88-3" name="__codelineno-88-3" href="#__codelineno-88-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="90">90. 內容一致性提示詞</h2>
+<p><strong>核心句</strong>：先分析範例規律，再批次生成與自檢。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：先分析範例規律，再批次生成與自檢。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「內容一致性提示詞」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「內容一致性提示詞」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a>本頁任務：內容一致性提示詞。
+<a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="91">91. 作品發表模板</h2>
+<p><strong>核心句</strong>：問題、玩法、最難的 bug、學到的事、網址。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：問題、玩法、最難的 bug、學到的事、網址。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「作品發表模板」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「作品發表模板」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-90-2" name="__codelineno-90-2" href="#__codelineno-90-2"></a>本頁任務：作品發表模板。
+<a id="__codelineno-90-3" name="__codelineno-90-3" href="#__codelineno-90-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="92">92. 正式畢業</h2>
+<p><strong>核心句</strong>：你已完成構想、規格、實作、測試、版本與發布。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：你已完成構想、規格、實作、測試、版本與發布。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「正式畢業」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「正式畢業」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a>先分析範例資料的欄位與規律，再依我的新主題批次產生內容；最後檢查格式、重複、數值範圍與語氣一致性。
+<a id="__codelineno-91-2" name="__codelineno-91-2" href="#__codelineno-91-2"></a>本頁任務：正式畢業。
+<a id="__codelineno-91-3" name="__codelineno-91-3" href="#__codelineno-91-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="93">93. 先問要不要多人</h2>
+<p><strong>核心句</strong>：不同裝置必須同步互動才需要 Firebase。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：不同裝置必須同步互動才需要 Firebase。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「先問要不要多人」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「先問要不要多人」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>本頁任務：先問要不要多人。
+<a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="94-firebase">94. Firebase 白話版</h2>
+<p><strong>核心句</strong>：大家共用的一本房間紀錄簿。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：大家共用的一本房間紀錄簿。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+Firebase 可想成所有玩家共用的房間紀錄簿，不是把每個人的整個畫面上傳。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「Firebase 白話版」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-93-2" name="__codelineno-93-2" href="#__codelineno-93-2"></a>本頁任務：Firebase 白話版。
+<a id="__codelineno-93-3" name="__codelineno-93-3" href="#__codelineno-93-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="95">95. 房間、玩家、動作紀錄</h2>
+<p><strong>核心句</strong>：只存必要資料，不把整個畫面塞上雲端。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：只存必要資料，不把整個畫面塞上雲端。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「房間、玩家、動作紀錄」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「房間、玩家、動作紀錄」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a>本頁任務：房間、玩家、動作紀錄。
+<a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="96">96. 鎖步同步白話版</h2>
+<p><strong>核心句</strong>：大家照同一份動作紀錄各自重算。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：大家照同一份動作紀錄各自重算。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+鎖步同步只傳動作，所有裝置依同一順序重算結果，降低狀態互相覆蓋。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「鎖步同步白話版」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a>本頁任務：鎖步同步白話版。
+<a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="97">97. 多人最常見的坑</h2>
+<p><strong>核心句</strong>：不同步、重複動作、搶建房、等待死結。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：不同步、重複動作、搶建房、等待死結。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「多人最常見的坑」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「多人最常見的坑」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a>本頁任務：多人最常見的坑。
+<a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="98">98. 安全網先於重構</h2>
+<p><strong>核心句</strong>：每隻修過的 bug 都留下回歸測試。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：每隻修過的 bug 都留下回歸測試。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+先替已修 bug 建回歸測試，再拆大檔案；否則重構後無法知道舊錯誤是否復發。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「安全網先於重構」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a>本頁任務：安全網先於重構。
+<a id="__codelineno-97-3" name="__codelineno-97-3" href="#__codelineno-97-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="99">99. 從單一大檔案走向三層</h2>
+<p><strong>核心句</strong>：資料層、邏輯層、畫面層逐步拆分。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：資料層、邏輯層、畫面層逐步拆分。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「從單一大檔案走向三層」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「從單一大檔案走向三層」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-98-2" name="__codelineno-98-2" href="#__codelineno-98-2"></a>本頁任務：從單一大檔案走向三層。
+<a id="__codelineno-98-3" name="__codelineno-98-3" href="#__codelineno-98-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+<h2 id="100">100. 下一座山</h2>
+<p><strong>核心句</strong>：卡牌編輯器、內容包、多人測試與正式產品化。</p>
+<p><strong>建議講法</strong><br />
+先問學員：「如果現在只能留下這一頁的一句話，你會留下什麼？」再說明：卡牌編輯器、內容包、多人測試與正式產品化。。不要急著進入術語，先讓學員指出這一步對作品有什麼可觀察的改變。</p>
+<p><strong>FinFlow／結業作品案例</strong><br />
+以學員正在製作的《人生十五回合》為例，把「下一座山」落到當前版本。</p>
+<p><strong>現場操作</strong><br />
+1. 打開目前 checkpoint 與瀏覽器。<br />
+2. 只完成「下一座山」對應的一個小改動。<br />
+3. 重新整理並走一次正常路徑，再刻意走一次錯誤路徑。<br />
+4. 將結果截圖或記錄在驗收表。</p>
+<p><strong>可複製 Prompt</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>先用白話說明房間、玩家、動作紀錄與同步流程；列出不同步、重複動作、等待死結的測試案例，再提出架構。
+<a id="__codelineno-99-2" name="__codelineno-99-2" href="#__codelineno-99-2"></a>本頁任務：下一座山。
+<a id="__codelineno-99-3" name="__codelineno-99-3" href="#__codelineno-99-3"></a>完成後請提供：完整檔案、變更摘要、人工測試步驟、仍不確定事項。
+</code></pre></div>
+<p><strong>預期結果</strong><br />
+學員能用自己的話解釋本頁概念，並交付一個可以實際操作或檢查的成果，而不是只說「AI 已完成」。</p>
+<p><strong>常見卡點</strong><br />
+- 一次提出太多需求：退回，只留一個可驗收改動。<br />
+- AI 自行補設定：要求列出假設並重新核可。<br />
+- 只看畫面沒走流程：至少完成正常、錯誤兩條路徑。</p>
+<p><strong>驗收標準</strong><br />
+- [ ] 看得到本頁對作品造成的具體差異。<br />
+- [ ] 能說明預期與實際結果。<br />
+- [ ] 已留下檔案、截圖或 commit 作為證據。</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
