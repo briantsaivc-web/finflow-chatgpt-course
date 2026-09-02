@@ -1,5 +1,8 @@
-site_name: 不會寫程式，照樣做出一款真的遊戲
-site_description: FinFlow 零基礎 AI 遊戲實作課
+site_name: FinFlow ChatGPT Course｜不會寫程式，照樣做出一款真的遊戲
+site_description: 以 finflow-chatgpt 為案例的零基礎 AI 遊戲實作課
+site_url: https://briantsaivc-web.github.io/finflow-chatgpt-course/
+repo_url: https://github.com/briantsaivc-web/finflow-chatgpt-course
+repo_name: briantsaivc-web/finflow-chatgpt-course
 theme:
   name: material
   language: zh-TW
@@ -14,17 +17,6 @@ nav:
   - Prompt 資源:
       - P01 構想整理卡: prompts/P01-idea.md
       - P04 Bug 診斷卡: prompts/P04-debug.md
-      - P07 規格核可卡: prompts/P07.md
-      - P08 最小修正卡: prompts/P08.md
-      - P09 UI 不動邏輯卡: prompts/P09.md
-      - P10 測試回饋轉譯卡: prompts/P10.md
-  - 講師專區:
-      - 100 頁完整授課稿: instructor/full-course-100-teaching-script.md
-  - 兩小時試教: workshop/pilot-guide.md
-  - 課程問卷:
-      - 課前問卷: forms/pre-course-survey.md
-      - 課後問卷: forms/post-course-survey.md
-  - 下載中心: downloads/index.md
   - 更新紀錄: changelog.md
 markdown_extensions:
   - admonition
